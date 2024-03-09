@@ -10,7 +10,7 @@ export function MainPage() {
 				<form onSubmit={onSubmitBucket}>
 					<input type="text" />
 					<button>
-						<img src="/add_icon.png" />
+						<img src={`${import.meta.env.BASE_URL}/add_icon.png}`} />
 						<span className="sr-only">제출</span>
 					</button>
 				</form>
