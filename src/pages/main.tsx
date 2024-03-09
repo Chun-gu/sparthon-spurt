@@ -1,3 +1,6 @@
+import addIcon from "/add_icon.png";
+import deleteIcon from "/delete_icon.png";
+
 export function MainPage() {
 	function onSubmitBucket() {}
 
@@ -10,7 +13,7 @@ export function MainPage() {
 				<form onSubmit={onSubmitBucket}>
 					<input type="text" />
 					<button>
-						<img src={`${import.meta.env.BASE_URL}/add_icon.png}`} />
+						<img src={addIcon} />
 						<span className="sr-only">제출</span>
 					</button>
 				</form>
@@ -21,7 +24,7 @@ export function MainPage() {
 							<div>
 								<span>웹 개발 시작하기</span>
 								<button>
-									<img src="/delete_icon.png" />
+									<img src={deleteIcon} />
 									<span className="sr-only">삭제</span>
 								</button>
 							</div>
