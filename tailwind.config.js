@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
+  content: [
+    "./index.html",
+    "./src/pages/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        blossom: "url(/blossom_bg_1.png)",
+      },
+    },
   },
   plugins: [],
 };
