@@ -1,35 +1,21 @@
-import addIcon from "/add_icon.png";
-import deleteIcon from "/delete_icon.png";
+import { BucketForm } from "../components/bucket-form";
+import { BucketList } from "../components/bucket-list";
 
 export function MainPage() {
-	function onSubmitBucket() {}
-
 	return (
-		<main className="min-h-screen bg-blossom bg-no-repeat bg-cover flex justify-center">
-			<section className="bg-white/20 flex flex-col items-center">
-				<h1 className="text-5xl text-red-500">Sparthon Bucket List</h1>
-				<h2>꿈은 꾸는 것이 아닌, 이루는 것이다.</h2>
+		<main className="flex min-h-screen justify-center bg-blossom bg-cover bg-fixed bg-no-repeat">
+			<section className="flex min-w-[320px] flex-col gap-4 bg-white/60 p-10">
+				<h1 className="text-5xl font-extrabold text-red-500">
+					Sparthon Bucket List
+				</h1>
+				<h2 className="text-center text-lg font-bold">
+					꿈은 꾸는 것이 아닌, 이루는 것이다.
+				</h2>
 
-				<form onSubmit={onSubmitBucket}>
-					<input type="text" />
-					<button>
-						<img src={addIcon} />
-						<span className="sr-only">제출</span>
-					</button>
-				</form>
+				<BucketForm />
 
 				<section>
-					<ul>
-						<li>
-							<div>
-								<span>웹 개발 시작하기</span>
-								<button>
-									<img src={deleteIcon} />
-									<span className="sr-only">삭제</span>
-								</button>
-							</div>
-						</li>
-					</ul>
+					<BucketList />
 				</section>
 			</section>
 		</main>
